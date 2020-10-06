@@ -11,37 +11,44 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="p-3 mb-2 bg-light text-dark">
+    <nav class="navbar navbar-dark bg-info">
+      <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
+    </nav>
+    <br />
     <div class="container text-center">
-      <h1>Generate password Here:</h1>
-      <form action="{% url 'password' %}">
-        <label for="#number">Length:</label>
-        <select name="length" id="number">
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12" selected>12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-        </select>
-        <br />
-        <label for="#uppercase">Uppercase</label>
-        <input type="checkbox" name="Uppercase" id="uppercase" />
-        <br />
-        <label for="#numeric">Numeric Value</label>
-        <input type="checkbox" name="Numeric" id="numeric" />
-        <br />
-        <label for="#special">Special</label>
-        <input type="checkbox" name="Special" id="special" />
-        <br />
-        <input
-          type="submit"
-          value="Generate Password"
-          class="btn btn-primary"
-        />
-      </form>
+      <div class="alert alert-secondary">
+        <h1 class="alert alert-primary">PASSWORD GENERATOR</h1>
+        <form action="{% url 'password' %}">
+          <label for="#number">Length:</label>
+          <select name="length" id="number">
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected>12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+          <br />
+          <label for="#uppercase">Uppercase</label>
+          <input type="checkbox" name="Uppercase" id="uppercase" />
+          <br />
+          <label for="#numeric">Numeric Value</label>
+          <input type="checkbox" name="Numeric" id="numeric" />
+          <br />
+          <label for="#special">Special</label>
+          <input type="checkbox" name="Special" id="special" />
+          <br />
+          <br />
+          <input
+            type="submit"
+            value="Generate Password"
+            class="btn btn-success"
+          />
+        </form>
+      </div>
     </div>
   </body>
 </html>
